@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "Food Keeper API",
+    "_postman_id": "d3e9f3c7-6e0d-4e4d-9b8d-foodkeeper",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "token", "value": "" },
+    { "key": "productId", "value": "1" },
+    { "key": "batchId", "value": "1" },
+    { "key": "categoryId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@foodkeeper.local\",\n  \"password\": \"TroqueEstaSenha123!\"\n}"
+        },
+        "url": "{{baseUrl}}/api/auth/login"
+      }
+    },
+    {
+      "name": "Criar categoria",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Padaria\"\n}"
+        },
+        "url": "{{baseUrl}}/api/categorias"
+      }
+    },
+    {
+      "name": "Criar produto",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Leite integral\",\n  \"unitOfMeasure\": \"L\",\n  \"storageSector\": \"GELADEIRA\",\n  \"barcode\": \"789000000001\",\n  \"categoryIds\": [1]\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "Criar lote",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productId\": {{productId}},\n  \"quantity\": 10,\n  \"expirationDate\": \"2026-12-31\"\n}"
+        },
+        "url": "{{baseUrl}}/api/lotes"
+      }
+    },
+    {
+      "name": "Saída",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"batchId\": {{batchId}},\n  \"type\": \"SAIDA\",\n  \"quantity\": 2,\n  \"reason\": \"Consumo na cozinha\"\n}"
+        },
+        "url": "{{baseUrl}}/api/movimentacoes/saida"
+      }
+    },
+    {
+      "name": "Dashboard",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": "{{baseUrl}}/api/dashboard"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.topbar__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.topbar__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.topbar__user-name {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.topbar__user-role {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.topbar__logout {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+}
+
+.topbar__logout:hover {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}

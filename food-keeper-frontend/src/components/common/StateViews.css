@@ -1,0 +1,49 @@
+.state-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-7) var(--space-4);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.state-view__title {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.state-view__text {
+  font-size: var(--fs-sm);
+  max-width: 320px;
+}
+
+.state-view__spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+.state-view--error .state-view__title {
+  color: var(--color-danger);
+}
+
+.state-view__retry {
+  margin-top: var(--space-2);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

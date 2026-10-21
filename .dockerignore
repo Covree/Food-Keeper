@@ -1,0 +1,10 @@
+target
+.git
+.metadata
+.settings
+.classpath
+.project
+.env
+food-keeper-frontend
+docs
+*.md
