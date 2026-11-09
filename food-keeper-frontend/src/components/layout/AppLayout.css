@@ -26,3 +26,5 @@
     padding: var(--space-4);
   }
 }
+
+.app-layout__content{max-width:1550px;margin:0 auto;padding:36px clamp(18px,3.2vw,56px) 70px;animation:page-in .45s ease both}@keyframes page-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}

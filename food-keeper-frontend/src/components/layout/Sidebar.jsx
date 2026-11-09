@@ -3,13 +3,13 @@ import { useAuth } from "../../hooks/useAuth"; // Ajuste o caminho de importaç�
 import "./Sidebar.css";
 
 const NAV_ITEMS = [
-  { to: "/", label: "Painel", end: true, roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
-  { to: "/produtos", label: "Produtos", roles: ["ADMIN", "GESTOR"] },
-  { to: "/categorias", label: "Categorias", roles: ["ADMIN", "GESTOR"] },
-  { to: "/lotes", label: "Lotes e validade", roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
-  { to: "/movimentacoes", label: "Movimentações", roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
-  { to: "/alertas", label: "Alertas", roles: ["ADMIN", "GESTOR"] },
-  { to: "/usuarios", label: "Gestão de Usuários", roles: ["ADMIN"] },
+  { icon: "▦", to: "/", label: "Painel", end: true, roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
+  { icon: "◈", to: "/produtos", label: "Produtos", roles: ["ADMIN", "GESTOR"] },
+  { icon: "▤", to: "/categorias", label: "Categorias", roles: ["ADMIN", "GESTOR"] },
+  { icon: "◷", to: "/lotes", label: "Lotes e validade", roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
+  { icon: "⇄", to: "/movimentacoes", label: "Movimentações", roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
+  { icon: "♧", to: "/alertas", label: "Alertas", roles: ["ADMIN", "GESTOR"] },
+  { icon: "♙", to: "/usuarios", label: "Gestão de Usuários", roles: ["ADMIN"] },
 ];
 
 export function Sidebar() {
@@ -37,7 +37,7 @@ export function Sidebar() {
                   `sidebar__link ${isActive ? "sidebar__link--active" : ""}`
                 }
               >
-                {item.label}
+                <span className="sidebar__icon" aria-hidden="true">{item.icon}</span>{item.label}
               </NavLink>
             </li>
           ))}

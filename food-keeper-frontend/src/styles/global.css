@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
 @import "./variables.css";
 
 * {
@@ -70,3 +70,9 @@ ul {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Food Keeper visual system — presentation only */
+::selection{background:#c6f4a4;color:#173c27}body{background:radial-gradient(circle at 92% 0%,#e8f9d7 0,transparent 32%),var(--color-bg)}button,a,input,select{transition:background .22s ease,color .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease}button:not(:disabled):active{transform:scale(.98)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #94db6a;outline-offset:3px}input,select,textarea{max-width:100%}input:focus,select:focus,textarea:focus{border-color:#66b879;box-shadow:0 0 0 4px #c9f4b65c}table{border-collapse:separate;border-spacing:0}thead{background:#f2f8ed}tbody tr{transition:background .2s}tbody tr:hover{background:#f5faef}button:hover:not(:disabled){filter:brightness(.98)}@media(max-width:600px){h1{font-size:1.65rem!important}}
+
+/* Consistent premium microinteractions */
+.sidebar__icon{font-size:19px;min-width:23px;display:inline-flex;align-items:center;justify-content:center;opacity:.8}.sidebar__link{display:flex;align-items:center;gap:12px}.panel,.stat-card,.insight-card{transition:transform .25s ease,box-shadow .25s ease}.panel:hover,.stat-card:hover,.insight-card:hover{transform:translateY(-3px);box-shadow:0 15px 35px #244c2714}button:disabled{cursor:not-allowed;opacity:.65}@media(prefers-reduced-motion:reduce){.panel:hover,.stat-card:hover,.insight-card:hover{transform:none}}
