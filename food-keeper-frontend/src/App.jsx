@@ -19,7 +19,7 @@ export default function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          {/* Rotas Públicas */}
+          {/* Rotas Públicas */}+
           <Route path="/login" element={<LoginPage />} />
           <Route path="/registro" element={<RegisterPage />} />
 

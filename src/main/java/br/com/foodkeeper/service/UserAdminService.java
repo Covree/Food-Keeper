@@ -32,18 +32,32 @@ public class UserAdminService {
         User alvo = repo.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
 
-        // não deixa o admin se rebaixar sozinho
         if (alvo.getEmail().equals(emailLogado) && novoRole != Role.ADMIN) {
             throw new IllegalStateException("Você não pode remover seu próprio acesso de admin");
         }
 
-        // não deixa o sistema ficar sem nenhum admin
         if (alvo.getRole() == Role.ADMIN && novoRole != Role.ADMIN
                 && repo.countByRole(Role.ADMIN) <= 1) {
             throw new IllegalStateException("Deve existir pelo menos um administrador");
         }
 
         alvo.setRole(novoRole);
+        return toResponse(repo.save(alvo));
+    }
+
+    @Transactional
+    public UserAdminResponse alternarStatus(Long id, String emailLogado) {
+        User alvo = repo.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
+
+        if (alvo.getEmail().equals(emailLogado)) {
+            throw new IllegalStateException("Você não pode desativar sua própria conta");
+        }
+
+        // Alterna utilizando getActive() e setActive() da entidade User
+        Boolean statusAtual = alvo.getActive();
+        alvo.setActive(!Boolean.TRUE.equals(statusAtual));
+
         return toResponse(repo.save(alvo));
     }
 
