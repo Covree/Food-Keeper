@@ -76,3 +76,11 @@
 }
 
 .sidebar{background:linear-gradient(165deg,#154b35,#0c392b);border-radius:0 28px 28px 0;box-shadow:10px 0 45px #153d2310;position:sticky;top:0;height:100vh}.sidebar__brand{padding:8px 8px 22px}.sidebar__brand-mark{background:#b7f36b;color:#17472c;width:46px;height:46px;border-radius:16px;font-family:var(--font-body);font-weight:800;box-shadow:0 8px 22px #0002}.sidebar__brand-name{font-family:var(--font-body);font-weight:800;letter-spacing:-.6px}.sidebar__nav{gap:8px}.sidebar__link{padding:14px 16px;border-radius:15px;color:#d6e7dc}.sidebar__link:hover{background:#ffffff18;transform:translateX(3px)}.sidebar__link--active{background:#b9f46c!important;color:#153f2a!important;box-shadow:0 8px 25px #071e151c;font-weight:750}.sidebar__link--active:hover{transform:none}@media(max-width:900px){.sidebar{position:relative;height:auto;border-radius:0 0 22px 22px;overflow-x:auto}.sidebar__brand{padding:0}.sidebar__nav{gap:4px}.sidebar__link{white-space:nowrap;padding:11px 13px}}
+/* Marca oficial e ajustes de proporção */
+.sidebar__brand{min-width:0;gap:12px;padding:12px 4px 24px}
+.sidebar__brand-mark{width:54px;height:54px;flex:0 0 54px;overflow:hidden;background:#101815;border:1px solid #ffffff24;border-radius:16px;padding:3px;box-shadow:0 8px 22px #0003}
+.sidebar__brand-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.sidebar__brand-name{font-size:18px;white-space:nowrap}
+.sidebar__link{display:flex;align-items:center;gap:14px;min-height:50px;transition:background .22s,color .22s,transform .22s,box-shadow .22s}
+.sidebar__icon{display:inline-flex;align-items:center;justify-content:center;min-width:22px;font-size:19px}
+@media(max-width:900px){.sidebar__brand{padding:0 10px 0 0}.sidebar__brand-mark{width:40px;height:40px;flex-basis:40px}.sidebar__brand-name{font-size:15px}}

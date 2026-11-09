@@ -31,16 +31,16 @@ export function LoginPage() {
   return (
     <div className="auth-page">
       <section className="auth-showcase" aria-label="Apresentação do Food Keeper">
-        <div className="auth-showcase__top"><span className="auth-showcase__logo">✳</span><span>foodkeeper<span className="auth-showcase__dot">.</span></span></div>
+        <div className="auth-showcase__top"><span className="auth-showcase__logo"><img src="/images/foodkeeper-icon.png" alt="" /></span><span>foodkeeper<span className="auth-showcase__dot">.</span></span></div>
         <div className="auth-showcase__content"><span className="auth-showcase__tag">✦ INTELIGÊNCIA PARA SEU ESTOQUE</span>
           <h2>Alimentos frescos.<br/><em>Gestão mais leve.</em></h2>
           <p>Controle seus produtos, acompanhe vencimentos e tome decisões melhores em um só lugar.</p>
           <div className="auth-visual" aria-hidden="true"><div className="auth-visual__top"><span>✳ Visão geral</span><span className="auth-visual__pill">● Em tempo real</span></div><div className="auth-visual__grid"><div className="auth-visual__metric"><small>Organização</small><strong>100%</strong><span>Mais clareza, menos desperdício</span></div><div className="auth-visual__donut"><span>✓</span></div></div><div className="auth-visual__bars"><i/><i/><i/><i/><i/><i/><i/><i/><i/><i/></div><div className="auth-visual__bottom"><span>Estoque sob controle</span><span>↗</span></div></div>
         </div><div className="auth-showcase__footer">FEITO PARA UMA ROTINA MAIS INTELIGENTE <span>✦</span></div>
       </section>
-      <main className="auth-main"><div className="auth-main__mobile-brand">✳ foodkeeper.</div><div className="auth-card">
+      <main className="auth-main"><div className="auth-main__mobile-brand"><img src="/images/foodkeeper-icon.png" alt="" /> foodkeeper.</div><div className="auth-card">
         <div className="auth-card__brand">
-          <span className="auth-card__brand-mark">✳</span>
+          <span className="auth-card__brand-mark"><img src="/images/foodkeeper-icon.png" alt="" /></span>
           <span className="auth-card__brand-name">Food Keeper</span>
         </div>
         <span className="auth-card__eyebrow">BEM-VINDO DE VOLTA 👋</span>

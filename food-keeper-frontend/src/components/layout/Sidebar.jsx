@@ -23,7 +23,7 @@ export function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar__brand">
-        <span className="sidebar__brand-mark">FK</span>
+        <span className="sidebar__brand-mark"><img src="/images/foodkeeper-icon.png" alt="" /></span>
         <span className="sidebar__brand-name">Food Keeper</span>
       </div>
       <nav>
