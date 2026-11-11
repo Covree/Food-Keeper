@@ -19,7 +19,7 @@ export function AlertsPage() {
     [onlyUnread]
   );
 
-  const canGenerate = user?.role === "ADMIN" || user?.role === "GESTOR";
+  const canGenerate = user?.role === "ADMIN" || user?.role === "GESTOR" || user?.role === "FUNCIONARIO";
 
   async function handleMarkAsRead(alert) {
     try {

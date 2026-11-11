@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { icon: "▤", to: "/categorias", label: "Categorias", roles: ["ADMIN", "GESTOR"] },
   { icon: "◷", to: "/lotes", label: "Lotes e validade", roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
   { icon: "⇄", to: "/movimentacoes", label: "Movimentações", roles: ["ADMIN", "GESTOR", "FUNCIONARIO"] },
-  { icon: "♧", to: "/alertas", label: "Alertas", roles: ["ADMIN", "GESTOR"] },
+  { icon: "♧", to: "/alertas", label: "Alertas", roles: ["ADMIN", "GESTOR","FUNCIONARIO" ] },
   { icon: "♙", to: "/usuarios", label: "Gestão de Usuários", roles: ["ADMIN"] },
 ];
 

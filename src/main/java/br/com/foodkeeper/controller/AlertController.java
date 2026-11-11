@@ -36,7 +36,7 @@ public class AlertController {
         return ResponseEntity.noContent().build();
     }
 
-    @PreAuthorize("hasAnyRole('ADMIN', 'GESTOR')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'GESTOR', 'FUNCIONARIO')")
     @PostMapping("/gerar")
     public ResponseEntity<Void> generateNow() {
         service.generateExpirationAlerts();
